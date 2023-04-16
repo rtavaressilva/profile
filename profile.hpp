@@ -32,7 +32,12 @@ public:
     virtual ~Profile();
 
 std::string view_profile() const;
-void add_hobby(std::string a_hobby);
+void add_hobby(std::string new_hobby);
+void remove_hobby();
+void view_hobbies(std::vector<std::string> hobbies) const;
+
+
+std::vector<std::string> get_hobbies() const;
 
 }; //class Profile
 

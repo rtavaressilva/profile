@@ -50,4 +50,30 @@ std::string Profile::view_profile() const {
         return os.str ();
 }
 
+void Profile::add_hobby(std::string new_hobby) {
+    hobbies.push_back(new_hobby);
+}
+
+void Profile::view_hobbies(std::vector<std::string> hobbies) const {
+    if (hobbies.size() <= 0) {
+        std::cout << "None" << std::endl;
+    } else {
+std::cout << name << "'s hobbies are:" << std::endl;
+    for(int i = 0; i < Profile::get_hobbies().size(); i++) {
+        std::cout << hobbies[i] << std::endl;
+}
+        }
+}
+
+std::vector<std::string> Profile::get_hobbies() const {
+    return hobbies;
+}
+
+void Profile::remove_hobby() {
+    return hobbies.pop_back();
+}
+
+
+
+
 
